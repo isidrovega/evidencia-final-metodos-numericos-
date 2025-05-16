@@ -36,3 +36,17 @@ def df(x):
 
         # Actualizamos x0 para la siguiente iteración
         x0 = x1
+
+# Si se alcanza el máximo de iteraciones sin converger
+    print("No se encontró la raíz en el número máximo de iteraciones.")
+    return None
+
+# Punto de entrada del programa
+if __name__ == "__main__":
+    # Solicitamos al usuario los valores necesarios
+    x0 = float(input("Introduce una estimación inicial: "))
+    tol = float(input("Introduce la tolerancia: "))
+    max_iter = int(input("Introduce el número máximo de iteraciones: "))
+
+    # Llamamos a la función principal con los datos del usuario
+    raiz = newton_raphson(x0, tol, max_iter)
