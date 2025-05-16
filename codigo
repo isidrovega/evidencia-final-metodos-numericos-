@@ -6,3 +6,7 @@ Proyecto Final - Métodos Numéricos
 # Definición de la función original f(x)
 def f(x):
     return x**3 - 2*x - 5
+
+# Definición de la derivada de la función f'(x)
+def df(x):
+    return 3*x**2 - 2
