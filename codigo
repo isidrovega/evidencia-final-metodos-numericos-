@@ -1,0 +1,8 @@
+"""
+Método de Newton-Raphson para encontrar raíces de funciones no lineales.
+Autor: [isidro alberto vega velasco]
+Proyecto Final - Métodos Numéricos
+"""
+# Definición de la función original f(x)
+def f(x):
+    return x**3 - 2*x - 5
