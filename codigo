@@ -50,3 +50,12 @@ if __name__ == "__main__":
 
     # Llamamos a la función principal con los datos del usuario
     raiz = newton_raphson(x0, tol, max_iter)
+
+# Mostramos el resultado final
+    if raiz is not None:
+        print(f"\nRaíz aproximada encontrada: {raiz:.6f}")
+    else:
+        print("\nNo se encontró la raíz.")
+
+    # Evitamos que la consola se cierre inmediatamente (útil en Windows)
+    input("\nPresiona Enter para salir...")
