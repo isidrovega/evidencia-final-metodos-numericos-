@@ -18,3 +18,21 @@ def df(x):
     for i in range(max_iter):
         fx = f(x0)
         dfx = df(x0)
+
+        # Si la derivada es cero, no se puede continuar
+        if dfx == 0:
+            print("Derivada cero. No se puede continuar.")
+            return None
+
+        # Calculamos el siguiente valor usando la fórmula de Newton-Raphson
+        x1 = x0 - fx / dfx
+
+        # Mostramos el progreso paso a paso
+        print(f"{i+1:<10} {x1:<15.6f} {f(x1):<15.6f}")
+
+        # Verificamos si la diferencia es menor que la tolerancia (criterio de paro)
+        if abs(x1 - x0) < tol:
+            return x1  # Raíz encontrada
+
+        # Actualizamos x0 para la siguiente iteración
+        x0 = x1
