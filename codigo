@@ -10,3 +10,11 @@ def f(x):
 # Definición de la derivada de la función f'(x)
 def df(x):
     return 3*x**2 - 2
+
+ # Imprimimos encabezado de tabla de resultados
+    print("{:<10} {:<15} {:<15}".format("Iteración", "Xi", "f(Xi)"))
+
+    # Bucle de iteraciones del método de Newton-Raphson
+    for i in range(max_iter):
+        fx = f(x0)
+        dfx = df(x0)
